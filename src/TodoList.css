@@ -1,0 +1,74 @@
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.todo-list li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.todo-list li:hover {
+    transform: scale(1.02);
+}
+
+/* 調整 todo-item 內容 */
+.todo-text {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 完成狀態 */
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* 按鈕樣式 */
+.todo-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.todo-actions button {
+    padding: 5px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.todo-actions .edit-btn {
+    background: #ffc107;
+    color: #fff;
+}
+
+.todo-actions .edit-btn:hover {
+    background: #e0a800;
+}
+
+.todo-actions .delete-btn {
+    background: #dc3545;
+    color: #fff;
+}
+
+.todo-actions .delete-btn:hover {
+    background: #c82333;
+}
+
+/* RWD：小螢幕調整 */
+@media (max-width: 1200px) {
+    .todo-list {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,92 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.todo-item:hover {
+    transform: scale(1.02);
+}
+
+/* 已完成的事項 */
+.todo-item_completed .todo-item__text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* 文字區域 */
+.todo-item__text {
+    flex: 1;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* 編輯輸入框 */
+.todo-item__edit-input {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* 按鈕區域 */
+.todo-item button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background 0.2s;
+}
+
+/* 儲存按鈕 */
+.todo-item__save-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.todo-item__save-btn:hover {
+    background-color: #218838;
+}
+
+/* 編輯按鈕 */
+.todo-item__edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.todo-item__edit-btn:hover {
+    background-color: #e0a800;
+}
+
+/* 刪除按鈕 */
+.todo-item__delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.todo-item__delete:hover {
+    background-color: #c82333;
+}
+
+/* RWD：小螢幕適配 */
+@media (max-width: 1200px) {
+    .todo-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .todo-item button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}

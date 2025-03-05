@@ -1,0 +1,31 @@
+/* 主要應用容器 */
+.todo-app {
+  text-align: center;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 標題 */
+.todo-app__title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 主要內容區 */
+.main1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* RWD 支援 */
+@media (max-width: 600px) {
+  .todo-app {
+      max-width: 90%;
+  }
+}
